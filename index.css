@@ -114,7 +114,7 @@ nav ul li a:hover {
       display: none;
 }
  
-@media(max-width: 786px) {
+@media only screen and (max-width: 1024px) {
  
       .logo {
             position: fixed;
@@ -235,7 +235,7 @@ h1 {
   grid-template-columns: 1fr;
   gap: 10px;
 
-  @media (min-width: 56.25em){
+  @media only screen and (min-width: 1024px){
     grid-template-columns: 55% 45%;
   }
 
@@ -245,7 +245,7 @@ h1 {
   grid-template-columns: 1fr;
   gap: 10px;
 
-  @media (min-width: 56.25em){
+  @media only screen and (min-width: 1024px){
     grid-template-columns: 60% 40%;
   }
 
@@ -255,7 +255,7 @@ h1 {
   grid-template-columns: 100%;
   gap: 20px;
 
-  @media (min-width: 56.25em){
+  @media only screen and (min-width: 1024px){
     grid-template-columns: 33% 33% 33%;
   }
 }
@@ -337,7 +337,7 @@ text-align: center;
     }
     
     /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px) {
+    @media only screen and (max-width: 1024px) {
       .col-25, .col-75, input[type=submit] {
         width: 100%;
         margin-top: 0;
@@ -560,7 +560,7 @@ q {font-style: italic;}
   color: #000;
 }
 
-@media (max-width: 800px) {
+@media only screen and (min-width: 1024px) {
   .form-inline input {
     margin: 10px 0;
   }
