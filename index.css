@@ -1,0 +1,575 @@
+    *, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: roboto, sans-serif;
+}
+header {
+      width: 100%;
+      height: 100%;
+      
+      background: url(hero.jpg) no-repeat 50% 50%;
+      background-size: cover;
+}
+.logo {
+      line-height: 60px;
+      position: fixed;
+      float: left;
+      margin: 16px 46px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 2px;
+}
+nav {
+      position: fixed;
+      width: 100%;
+      line-height: 60px;
+      background-color: #000;
+      z-index: 5;
+      border-bottom: khaki 2px solid;
+}
+nav a{
+    color: #fff;
+    text-decoration: none;
+}
+nav button{
+    display: block;
+    font-size: clamp(14px, 1.5vw, 18px);
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    background: linear-gradient(90deg, lightgray,white, darkgray, black);
+    color: black;
+    margin: 0px auto 0;
+    padding: 12px 20px;
+    cursor: pointer;
+    z-index: 1;
+    background-size: 400%;
+    animation: animate 6s linear infinite;
+    
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+nav button:hover {
+    background: khaki;
+    color: black;
+}
+nav ul {
+      line-height: 60px;
+      list-style: none;
+      background: rgba(0, 0, 0, 0);
+      overflow: hidden;
+      color: #fff;
+      padding: 0;
+      text-align: right;
+      margin: 0;
+      padding-right: 40px;
+      transition: 1s;
+}
+ 
+nav.black ul {
+      background: #000;
+}
+ 
+nav ul li {
+      display: inline-block;
+      padding: 16px 40px;;
+}
+ 
+nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+}
+nav ul li:hover {
+    background-color: khaki;
+    color: #000;
+}
+nav ul li a:hover {
+      background-color: khaki;
+      color: black;
+}
+ 
+.menu-icon {
+      line-height: 60px;
+      width: 100%;
+      background: #000;
+      text-align: right;
+      box-sizing: border-box;
+      padding: 15px 24px;
+      cursor: pointer;
+      color: #fff;
+      display: none;
+}
+ 
+@media(max-width: 786px) {
+ 
+      .logo {
+            position: fixed;
+            top: 0;
+            margin-top: 16px;
+      }
+ 
+      nav ul {
+            max-height: 0px;
+            background: #000;
+      }
+ 
+      nav.black ul {
+            background: #000;
+      }
+ 
+      .showing {
+            max-height: 34em;
+      }
+ 
+      nav ul li {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 24px;
+            text-align: center;
+      }
+ 
+      .menu-icon {
+            display: block;
+      }
+ 
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.home-header {
+    height: 100vh;
+    position: relative;
+    z-index: 2;
+}
+video {
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    
+}
+.home-header-content {
+    position: relative;
+    padding-top: 150px;
+    color: #fff;
+    text-align: center;
+}
+.home-header-content a{
+    color: #fff;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: Playfair Display, serif;
+    font-size: clamp(45px, 7vw, 130px);
+    line-height: 1.1;
+}
+
+.home-header p {
+    font-size: clamp(25px, 4vw, 40px);
+    margin-top: 10px;
+}
+
+.home-header-content button {
+    display: block;
+    font-size: clamp(14px, 1.5vw, 18px);
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    background: transparent;
+    color: #fff;
+    margin: 50px auto 0;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+.home-header-content button:hover {
+    background: white;
+    color: black;
+
+}
+
+
+.main-content, .sidebar {
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.main-content {
+}
+
+.sidebar {
+
+}
+
+.grid-parent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+
+  @media (min-width: 56.25em){
+    grid-template-columns: 55% 45%;
+  }
+
+}
+.grid-parent-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+
+  @media (min-width: 56.25em){
+    grid-template-columns: 60% 40%;
+  }
+
+}
+.grid-parent-3-columns {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 20px;
+
+  @media (min-width: 56.25em){
+    grid-template-columns: 33% 33% 33%;
+  }
+}
+#about-us-section{
+    padding: 50px;
+    width: 100%;
+}
+#about-us-section h2{
+text-align: center;
+}
+* {
+      box-sizing: border-box;
+    }
+    
+    #about-us-section input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    #about-us-section input[type=email], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    #about-us-section input[type=number], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    
+    #about-us-section label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+    
+    #about-us-section input[type=submit] {
+      background-color: khaki;
+      color: black;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+    
+    #about-us-section input[type=submit]:hover {
+      background-color: khaki;
+    }
+    
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
+    
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+.main-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+aside{
+    position: relative;
+    text-align: center;
+
+}
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+  
+
+.banner button{
+    background-color: khaki;
+    border: 0;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    cursor:none;
+
+}
+.form button{
+    background-color: black;
+    border: 0;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    cursor:pointer;
+}
+.form button:hover{
+    background-color: #fff;
+    color: #000;
+}
+#parralax {
+  /* The image used */
+  background-image: url("https://res.cloudinary.com/di449masi/image/upload/v1712856548/new-drywall_crg93p.jpg");
+
+   /* Full height */
+   min-height: 200px;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+width: 100%;
+}
+h2{
+    text-align: center;
+}
+#services img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 175px;
+    width: 175px;
+}
+#services{
+    padding: 100px;
+    width: 100%;
+    background-color: khaki;
+}
+#services a[href]{
+color: darkgray;
+}
+#services a[href]:hover{
+color: gray;
+}
+#services footer{
+    text-align: center;
+}
+
+
+#reviews-div{
+    
+    padding: 150px;
+}
+#reviews-div .links{
+    color: darkkhaki;
+    text-align: center;
+}
+.avatar {
+  vertical-align: middle;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: darkkhaki;}
+#footer{
+    text-align: center;
+    padding: 150px;
+    background-color: khaki;
+}
+.form-inline {  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.form-inline button {
+  padding: 10px 20px;
+  background-color: black;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+}
+
+.form-inline button:hover {
+  background-color: white;
+  color: #000;
+}
+
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+  
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+#footer aside{
+    text-align: center;
+}
