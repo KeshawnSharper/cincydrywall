@@ -15,8 +15,11 @@ $(document).ready(function() {
      })
 });
 $(document).ready(function() {
-     $("nav ul li").on("click", function() {
-           $("nav ul").removeClass("mobile-list-showing");
+     $("#navbar ul a li").on("click", function() {
+        $(".mobile-list-showing").css({display:"none"});
+        $(".navbar-button").css({display:"block"});
+        $(".close-icon").css({display:"none"});
+        $(".mobile-icon").css({display:"block"});
      });
 });
 
