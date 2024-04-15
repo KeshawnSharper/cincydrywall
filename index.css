@@ -3,56 +3,62 @@
     margin: 0;
     padding: 0;
 }
+/* *{
+    box-sizing: border-box;
+} */
 html {
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 body {
     font-family: roboto, sans-serif;
+    box-sizing: border-box;
+    width: 100%;
 }
-header {
-      width: 100%;
-      height: 100%;
-      
-      background: url(hero.jpg) no-repeat 50% 50%;
-      background-size: cover;
-}
-.logo {
-      line-height: 60px;
-      position: fixed;
-      float: left;
-      margin: 16px 46px;
-      color: #fff;
-      font-weight: bold;
-      font-size: 20px;
-      letter-spacing: 2px;
-}
-nav {
-      position: fixed;
-      width: 100%;
-      line-height: 60px;
-      background-color: #000;
-      z-index: 5;
-      border-bottom: khaki 2px solid;
-}
-nav a{
-    color: #fff;
-    text-decoration: none;
-}
-nav button{
+#navbar{
+    width:100%;
+    text-align: center;
+    background-color: #000;
+    color: #000;
+    position: fixed;
+    z-index: 5;
     display: block;
+    padding: 2rem;
+    border-bottom: khaki 2px solid;
+}
+.navbar-mobile{
+    display: inline-flex;
+    width: 100%;
+}
+
+#navbar i {
+cursor: pointer;
+margin-right: 2rem ;
+}
+.close-icon{
+    display: none;
+}
+#navbar button{
+    position: relative;
     font-size: clamp(14px, 1.5vw, 18px);
     border: 1px solid #f1f1f1;
     border-radius: 5px;
     background: linear-gradient(90deg, lightgray,white, darkgray, black);
     color: black;
-    margin: 0px auto 0;
+    /* margin: 0px auto 0; */
+
     padding: 12px 20px;
     cursor: pointer;
-    z-index: 1;
     background-size: 400%;
     animation: animate 6s linear infinite;
+    width: 25rem;
     
+}
+.mobile-list-showing{
+display: none;
+float: left;
+width: 100%;
 }
 @keyframes animate {
   0% {
@@ -62,92 +68,41 @@ nav button{
     background-position: 400%;
   }
 }
-nav button:hover {
-    background: khaki;
-    color: black;
+#navbar ul a li{
+    width: 100%;
+    padding: 1.3rem;
 }
-nav ul {
-      line-height: 60px;
-      list-style: none;
-      background: rgba(0, 0, 0, 0);
-      overflow: hidden;
-      color: #fff;
-      padding: 0;
-      text-align: right;
-      margin: 0;
-      padding-right: 40px;
-      transition: 1s;
+#navbar ul a{
+    text-decoration: none;
+    color: white;
+    list-style: none;
 }
- 
-nav.black ul {
-      background: #000;
-}
- 
-nav ul li {
-      display: inline-block;
-      padding: 16px 40px;;
-}
- 
-nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 16px;
-}
-nav ul li:hover {
+#navbar ul a li:hover{
     background-color: khaki;
     color: #000;
 }
-nav ul li a:hover {
-      background-color: khaki;
-      color: black;
+.navbar-cpu{
+    display: none;
 }
- 
-.menu-icon {
-      line-height: 60px;
-      width: 100%;
-      background: #000;
-      text-align: right;
-      box-sizing: border-box;
-      padding: 15px 24px;
-      cursor: pointer;
-      color: #fff;
-      display: none;
-}
- 
-@media only screen and (max-width: 1024px) {
- 
-      .logo {
-            position: fixed;
-            top: 0;
-            margin-top: 16px;
-      }
- 
-      nav ul {
-            max-height: 0px;
-            background: #000;
-      }
- 
-      nav.black ul {
-            background: #000;
-      }
- 
-      .showing {
-            max-height: 34em;
-      }
- 
-      nav ul li {
-            box-sizing: border-box;
-            width: 100%;
-            padding: 24px;
-            text-align: center;
-      }
- 
-      .menu-icon {
-            display: block;
-      }
- 
+.cpu-list-showing{
+display: inline-flex;
+text-align: right;
+width: 100%;
 }
 
+
+@media only screen and (min-width: 992px) {
+    .navbar-mobile{
+        display: none;
+    }
+    .navbar-cpu{
+        display: inline-flex;
+    }
+    #navbar button{
+        width: 35rem;
+        margin-right: 7rem;
+    }
+}
 .content {
   padding: 16px;
 }
@@ -167,15 +122,19 @@ nav ul li a:hover {
     height: 100vh;
     position: relative;
     z-index: 2;
+    width: 100%;
 }
 video {
     position: absolute;
+    top: 0;
     height: 100%;
-    object-fit: cover;
+    min-width: 100%;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
+    background-repeat: repeat;
+    margin: auto;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
     
 }
 .home-header-content {
@@ -376,7 +335,7 @@ aside{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 500px;
+    width: 30rem;
     cursor:none;
 
 }
@@ -458,6 +417,7 @@ color: gray;
 .slideshow-container {
   position: relative;
   background: #f1f1f1f1;
+  width: 25rem;
 }
 
 /* Slides */
@@ -500,6 +460,7 @@ color: gray;
     text-align: center;
     padding: 20px;
     background: #ddd;
+    width: 25rem;
 }
 
 /* The dots/bullets/indicators */
