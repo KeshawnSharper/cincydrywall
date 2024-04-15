@@ -1,11 +1,22 @@
 $(document).ready(function() {
-     $(".menu-icon").on("click", function() {
-           $("nav ul").toggleClass("showing");
-     });
+     $(".mobile-icon").on("click", function() {
+        console.log("hello")
+            $(".mobile-list-showing").css({display:"block"});
+            $(".navbar-button").css({display:"none"});
+            $(".close-icon").css({display:"block"});
+            $(".mobile-icon").css({display:"none"});
+     })
+     $(".close-icon").on("click", function() {
+        console.log("hello")
+            $(".mobile-list-showing").css({display:"none"});
+            $(".navbar-button").css({display:"block"});
+            $(".close-icon").css({display:"none"});
+            $(".mobile-icon").css({display:"block"});
+     })
 });
 $(document).ready(function() {
      $("nav ul li").on("click", function() {
-           $("nav ul").removeClass("showing");
+           $("nav ul").removeClass("mobile-list-showing");
      });
 });
 
