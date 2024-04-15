@@ -18,7 +18,6 @@ body {
 }
 #navbar{
     width:100%;
-    text-align: center;
     background-color: #000;
     color: #000;
     position: fixed;
@@ -34,31 +33,38 @@ body {
 
 #navbar i {
 cursor: pointer;
-margin-right: 2rem ;
 }
 .close-icon{
     display: none;
 }
 #navbar button{
-    position: relative;
-    font-size: clamp(14px, 1.5vw, 18px);
     border: 1px solid #f1f1f1;
     border-radius: 5px;
     background: linear-gradient(90deg, lightgray,white, darkgray, black);
     color: black;
     /* margin: 0px auto 0; */
-
+    right: 15rem;
     padding: 12px 20px;
     cursor: pointer;
     background-size: 400%;
+    display: block;
+    width: 30rem;
     animation: animate 6s linear infinite;
-    width: 25rem;
     
+}
+#navbar button:hover{
+    background: khaki;
+    color:black;
+}
+.mobile-icon{
+    width: 100%;
+    display: flex;
 }
 .mobile-list-showing{
 display: none;
 float: left;
 width: 100%;
+text-align: left;
 }
 @keyframes animate {
   0% {
@@ -77,6 +83,7 @@ width: 100%;
     color: white;
     list-style: none;
 }
+
 #navbar ul a li:hover{
     background-color: khaki;
     color: #000;
@@ -97,10 +104,31 @@ width: 100%;
     }
     .navbar-cpu{
         display: inline-flex;
+        text-align: center;
     }
-    #navbar button{
-        width: 35rem;
-        margin-right: 7rem;
+    #navbar{
+        text-align: center;
+    }
+    .home-header-content {
+        padding: 250px;
+    }
+    #about-us-section{
+        padding: 150px;
+        text-align: center;
+    }
+    .banner button{
+        text-align: center;
+        width: 500px;
+    }
+    #services{
+        padding: 150px;
+    }
+    #reviews-div{
+        padding: 150px;
+    }
+    #footer{
+        padding: 150px;
+        text-align: center;
     }
 }
 .content {
@@ -119,7 +147,7 @@ width: 100%;
 }
 
 .home-header {
-    height: 100vh;
+    height: 40rem;
     position: relative;
     z-index: 2;
     width: 100%;
@@ -128,21 +156,18 @@ video {
     position: absolute;
     top: 0;
     height: 100%;
-    min-width: 100%;
-    background-position: center;
     background-repeat: repeat;
     margin: auto;
-    right: 0;
+    left: 0;
     bottom: 0;
     object-fit: cover;
+    width: 100%;
     
 }
 .home-header-content {
     position: relative;
-    padding-top: 150px;
-    color: #fff;
-    text-align: center;
-}
+    padding-top: 250px;
+    color: #fff;}
 .home-header-content a{
     color: #fff;
     text-decoration: none;
@@ -150,7 +175,6 @@ video {
 
 h1 {
     font-family: Playfair Display, serif;
-    font-size: clamp(45px, 7vw, 130px);
     line-height: 1.1;
 }
 
@@ -166,7 +190,6 @@ h1 {
     border-radius: 5px;
     background: transparent;
     color: #fff;
-    margin: 50px auto 0;
     padding: 12px 20px;
     cursor: pointer;
 }
@@ -219,15 +242,8 @@ h1 {
   }
 }
 #about-us-section{
-    padding: 50px;
     width: 100%;
 }
-#about-us-section h2{
-text-align: center;
-}
-* {
-      box-sizing: border-box;
-    }
     
     #about-us-section input[type=text], select, textarea {
       width: 100%;
@@ -335,7 +351,7 @@ aside{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 30rem;
+    width: 100%;
     cursor:none;
 
 }
@@ -384,7 +400,6 @@ h2{
     width: 175px;
 }
 #services{
-    padding: 100px;
     width: 100%;
     background-color: khaki;
 }
@@ -395,17 +410,15 @@ color: darkgray;
 color: gray;
 }
 #services footer{
-    text-align: center;
 }
 
 
 #reviews-div{
     
-    padding: 150px;
+    width:100%;
 }
 #reviews-div .links{
     color: darkkhaki;
-    text-align: center;
 }
 .avatar {
   vertical-align: middle;
@@ -417,7 +430,6 @@ color: gray;
 .slideshow-container {
   position: relative;
   background: #f1f1f1f1;
-  width: 25rem;
 }
 
 /* Slides */
@@ -460,7 +472,6 @@ color: gray;
     text-align: center;
     padding: 20px;
     background: #ddd;
-    width: 25rem;
 }
 
 /* The dots/bullets/indicators */
@@ -486,8 +497,7 @@ q {font-style: italic;}
 /* Add a blue color to the author */
 .author {color: darkkhaki;}
 #footer{
-    text-align: center;
-    padding: 150px;
+   width: 100%;
     background-color: khaki;
 }
 .form-inline {  
