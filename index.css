@@ -103,7 +103,7 @@ width: 100%;
     display: none;
   }
   video{
-    z-index: 3;
+    z-index: 1;
   }
     .navbar-mobile{
         display: none;
@@ -169,7 +169,7 @@ video {
     bottom: 0;
     object-fit: cover;
     width: 100%; 
-    z-index: 0;
+    z-index: -1;
 }
 .home-header img{
   position: absolute;
@@ -181,7 +181,6 @@ video {
   bottom: 0;
   object-fit: cover;
   width: 100%;
-  z-index: 2;
 }
 .home-header-content {
     position: relative;
